@@ -1,0 +1,29 @@
+* {
+    border: 1px solid blue;
+}
+
+.wrapper {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+}
+
+.rubrik {
+    text-align: center;
+    grid-column: 2/10;
+    grid-row: 1;
+    color: blueviolet;
+}
+
+.navbar {
+    grid-column: 2/10;
+    grid-row: 2;
+    display: flex;
+    gap: 10px;
+}
+
+.pil {
+    grid-row: 2;
+    grid-column: 10/11;
+}
