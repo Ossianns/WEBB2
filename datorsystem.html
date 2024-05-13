@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="datorsystem.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1 class="rubrik">ABC-Klubben - för användare av alla slags datorer</h1>
+        <div class="bild"><img src="bilder/datorsystembild.png" alt=""></div>
+        <div id="navbar" class="navbar">
+            <button class="knapp" onclick="location.href='index.html'">Hem</button>
+            <button class="knapp" onclick="location.href='info.html'">Info för medlemmar</button>
+            <button class="knapp" onclick="location.href='styrelse.html'">Styrelse</button>
+            <button class="knapp" onclick="location.href='medlemsformoner.html'">Medlemsförmåner</button>
+            <button class="knapp" onclick="location.href='datorsystem.html'">Datorsystem</button>
+            <button class="knapp" onclick="location.href='ovrigt.html'">Övrigt</button>
+        </div>
+        <div id="pil" class="pil"></div>
+        <div class="text">
+            <h2>Vårt datorsystem</h2>
+            <p>Kärnan i vårt system består av en blandning av olika UNIX-dialekter, inklusive LINUX. Totalt har vi drygt
+                10 maskiner, nätverkande i ett huvudsystem, samt några enstaka experimentmaskiner. De flesta maskinerna
+                är accessbara över nätet för medlemmarna.</p>
+            <div class="div">
+                <figure>
+                    <figcaption>
+                        <h3>I en principskiss ser systemet ut så här:</h3>
+                    </figcaption>
+                    <picture>
+                        <img src="bilder/datorsystemabc.png" alt="">
+                    </picture>
+                </figure>
+            </div>
+            <h3>Phobia; systemets väktare
+            </h3>
+            <p>All datatrafik till klubben passerar Phobia som inspekterar varje litet datapaket för att avgöra om det
+                skall släppas in eller inte. Phobia kör OpenBSD och brandväggen PF (Packet Filter).</p>
+            <p>Den trafik som Phobia släpper igenom går vidare till de servrar den var adresserad till från början. Alla
+                har egna publika IP-nummer så någon lokal router behövs inte. I stället är det inställningarna i
+                brandväggen som avgör om det går att komma fram till en specifik dator, bara delar av den eller inte
+                alls.</p>
+            <h3>Orm och Adam</h3>
+            <p>Orm kör operativsystemet OpenBSD och innehåller bland annat en DNS-server (ns.abc.se) där klubbens
+                medlemmar kan parkera sina egna domäner. Orm är en skalserver, där medlemmarna kan logga in i systemet
+                (BSD).</p>
+            <p>Adam är en rackserver med två hårdvaruspeglade hårdiskar (RAID- 1). Operativsystemet är CentOS, en
+                Linuxdistribution. Även här finns en DNS (ns2.abc.se) som håller reda på medlemmarnas egna domäner, men
+                framför allt körs här ABCKOM.</p>
+            <h3>Hekla, Etna, Siw och Sonja</h3>
+            <p>De fyra rackservrarna Hekla, Etna, Siw och Sonja utgör fundamentet i vårt system. Lite förenklat kan man
+                säga att Hekla och Etna processar information medan Siw och Sonja lagrar och säkrar den.</p>
+            <p>Hekla är vår nya mailserver och kör operativsystemet OpenBSD. Här rullar våra epostservrar för IMAP och
+                POP3 och här finns även klubbens webbmail.</p>
+            <p>Etna kör operativsystemet Debian. På Etna ligger bland annat den webbserver som gör att du kan läsa denna
+                och andra sidor på vår sajt.</p>
+            <p>På Etna är efterföljaren till MySQL, MariaDB installerad. Här finns även de domäner våra medlemmar valt
+                att parkera i Linux. På Etna finns även time.abc.se numera. Etna är en skalserver, där medlemmarna kan
+                logga in i systemet (Linux).</p>
+            <p>Siw och Sonja är våra två NAS-servrar (Network Attached Storage). De är av fabrikat Qnap och har varsin
+                AMD Opteron 64-bitars processor på 1600 MHz och fyra hårddiskar vardera på 400 GB styck. Med en basal
+                installation av operativsystemet FreeBSD utgör de fullgoda servrar i sig själva, men i vårt system har
+                de bara till uppgift att lagra och säkra våra medlemmars information.</p>
+            <h3>Gorilla</h3>
+            <p>Gorilla kör operativsystemet OpenBSD och kör klubbens primära DNS.</p>
+            <h3>Inloggningsvägen</h3>
+            <p>Alla medlemmar har användar-id och lösenord till Orm och Etna. Vilken man än loggar in på har man
+                tillgång till samma filer eftersom de NFS-monteras från Siw på den dator man loggat in på. Det innebär
+                att man kan köra i tre skilda operativsystem. Programmen körs på den dator man loggat in på men filerna
+                sparas på Sonja.</p>
+            <footer>
+                - ABC-klubben, Box 2507, 116 74 STOCKHOLM - <br> info@abc.se
+            </footer>
+        </div>
+        <script src="general.js"></script>
+</body>
+
+</html>
