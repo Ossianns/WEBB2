@@ -1,0 +1,22 @@
+@mixin knapp($color, $size) {
+    /* height: $size;
+    width: $size * 2; */
+    background-color: $color;
+    opacity: 70%;
+    cursor: pointer;
+
+
+    aspect-ratio: 2/1;
+}
+
+@mixin pil($color, $size) {
+
+
+    height: calc($size / 1.7);
+    width: calc($size / 1.7);
+    border-bottom: 15px solid $color;
+    border-left: 15px solid $color;
+    transform: rotate(45deg);
+    cursor: pointer;
+
+}
