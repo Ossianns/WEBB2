@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="general.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1 class="rubrik">ABC-Klubben - för användare av alla slags datorer</h1>
+        <div class="bild"><img src="bilder/abcbild.jpg" alt=""></div>
+        <div id="navbar" class="navbar">
+            <button class="knapp" onclick="location.href='index.html'">Hem</button>
+            <button class="knapp textflex" onclick="location.href='info.html'">
+                <div class="flex1">Info för </div>
+                <div class="flex2">medlemmar</div>
+            </button>
+            <button class="knapp" onclick="location.href='Styrelse.html'">Styrelse</button>
+            <button class="knapp textflex" onclick="location.href='medlemsformoner.html'">
+                <div class="flex1">Medlems</div>
+                <div class="flex2">förmåner</div>
+            </button>
+            <button class="knapp textflex" onclick="location.href='datorsystem.html'">
+                <div class="flex1">Dator</div>
+                <div class="flex2">system</div>
+            </button>
+            <button class="knapp" onclick="location.href='ovrigt.html'">Övrigt</button>
+        </div>
+        <div id="pildiv" class="pildiv">
+            <div id="pil" class="pil"></div>
+        </div>
+        <div id="text" class="text">
+            <h2>Styrelse</h2>
+            <p>Vi håller årsmöte och väljer styrelse i mars varje år.</p>
+            <h3>Styrelse fr.o.m 2024-03-16</h3>
+            <ul>
+                <li>Tommy Hamberg &lt;508&gt;, ordförande, email m508@abc.se</li>
+                <li>Gabriel Kihlman &lt;10723&gt;, vice ordförande, email gk@abc.se</li>
+                <li>Andreas Olsson &lt;9874&gt;, sekreterare, email m9874@abc.se</li>
+                <li>NilsOla Nilsson &lt;10785&gt;, kassör, email nilsola@abc.se</li>
+                <li>Marcus Strömberg &lt;9370&gt;, ledamot, email m9370@abc.se</li>
+                <li>Tora Philp &lt;10886&gt;, ledamot, email m10886@abc.se</li>
+            </ul>
+            <h3>Revisorer</h3>
+            <p>Beatriz Pereira, BTRIX Ekonomitjänster för företag och privatpersoner, email info@btrix.se
+            </p>
+            <h3>Stadgar</h3>
+            <p>Våra stadgar finns <a href="#">här</a></p>
+        </div>
+        <footer>
+            - ABC-klubben, Box 2507, 116 74 STOCKHOLM - <br> info@abc.se
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="general.js"></script>
+</body>
+
+</html>
