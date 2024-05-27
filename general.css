@@ -1,0 +1,149 @@
+/* * {
+    border: 1px solid blue;
+
+} */
+
+:root {
+    --svart: #0F1108;
+    --brun: #241909;
+    --nyan: #00F6ED;
+    --ljusgrå: #CAD8DE;
+    --mörkgrå: #645853;
+}
+
+body {
+    margin: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Oswald;
+}
+
+.wrapper {
+
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+
+    font-family: roboto;
+}
+
+.rubrik {
+    grid-column: 2/10;
+    grid-row: 1;
+}
+
+img {
+    width: 100%;
+}
+
+.bild {
+    grid-row: 2;
+    grid-column: 1/11;
+}
+
+.navbar {
+    grid-column: 2/10;
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(40px, 1fr));
+    justify-content: space-between;
+    gap: 10px;
+
+    justify-content: center;
+    align-items: center;
+
+    /* background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); */
+}
+
+@media only screen and (max-width: 1000px) {
+    .knapp {
+        font-size: 10px;
+    }
+
+    .pil {
+        height: 30px;
+        width: 30px;
+
+        border-bottom: 10px solid grey;
+        border-left: 10px solid grey;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+    .knapp {
+        font-size: 8px;
+    }
+
+    .pil {
+        height: 20px;
+        width: 20px;
+
+        border-bottom: 7px solid grey;
+        border-left: 7px solid grey;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    /* .knapp {
+        font-size: 4px;
+    } */
+
+    .pil {
+        height: 20px;
+        width: 20px;
+    }
+
+}
+
+.textflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+
+.pildiv {
+    grid-row: 3;
+    grid-column: 10/11;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    grid-row: 5;
+    grid-column: 2/10;
+
+    background-color: var(--ljusgrå);
+
+    border-radius: 3px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+footer {
+    grid-row: 6;
+    grid-column: 2/10;
+
+    background-color: var(--brun);
+
+    color: var(--nyan);
+
+    border-radius: 3px;
+}
+
+ul {
+    text-align: left;
+    display: grid;
+    justify-content: center;
+}
