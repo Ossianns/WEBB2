@@ -1,0 +1,14 @@
+figure {
+    max-width: 600px;
+}
+
+.div {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    border-radius: 3px;
+    border: solid black 2px;
+}
